@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+</head>
+
+<body>
+   <div class="wrapper fadeInDown">
+      <div id="formContent">
+         <h2 class="Main">Reserva</h2>
+
+         <div class="FadeIn first">
+            <img src="{{ url_for('static', filename='logo.png') }}" id="icon"/>
+         </div>
+         <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {{ form.title }}
+            {{ form.data_id }}
+            {{ form.area }}
+            <input type="datetime-local" id="start_event" name="start_event">
+            <input type="datetime-local" id="end_event" name="end_event"><br>
+            {{ form.submit }}
+         </form>
+         <div id="formFooter">
+            <a class="a2">Volver. &#160</a><a class="UnderLineHover" href="{{ url_for('dashboard') }}">Dashboard</a>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

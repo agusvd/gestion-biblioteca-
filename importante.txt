@@ -1,0 +1,32 @@
+ojala usar visual studio code, y la terminal que tiene que usar es apretando
+en el index.py click derecho, open in integrated terminal (para usar la terminal del proyecto)
+
+------------------------------------------------------------------------------------------------------------
+tambien puedes eliminar el env y luego de hacer los pasos de instalar virtualenv: en la terminal abierta
+anteriormente, escribir: virtualenv -p python env
+----------------------------------------------------------------------------------------
+
+1. Set-ExecutionPolicy -Scope CurrentUser unrestricted (en el cmd)
+2. Instalamos la version de python 3.9.8
+3. Instalamos virtualenv==20.4.7
+
+luego en la terminal de proyecto:
+cd env
+cd Scripts
+activate
+(o iniciar el archivo activate.bat de env/scripts)
+
+el entorno estara activado cuando salga un (env) a la izquierda 
+
+luego:
+ python -m pip install -r requirements.txt (desde la ruta "/" del proyecto)
+ o 
+ pip install -r requirements.txt
+
+ para iniciar el proyecto iniciar el index.py (python index.py en terminal con el entorno virtual activado)
+
+usuarios: admin, profesor1, profesor2 y gestor1
+contraseña: 123123123
+
+la misma contraseña para todos los usuarios
+

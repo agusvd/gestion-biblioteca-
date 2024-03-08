@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <h2 class="Main">Crear cuenta</h2>
+ 
+            <div class="FadeIn first">
+                <img src="{{ url_for('static', filename='logo.png') }}" id="icon"/>
+            </div>
+          
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.nombre_usuario }}
+                {{ form.password }}
+                {{ form.correo }}
+                {{ form.nombre_completo}}
+                {{ form.run }}
+                <p>Selecciona el área de la carrera</p>{{ form.area }}
+                <p></p>
+                {{ form.submit }}
+            </form>
+            <div id="formFooter">
+                <a class="a2">¿Ya tienes una cuenta?&#160</a><a class="UnderLineHover" href="{{ url_for('login') }}"> Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+</head>
+
+<body>
+   <div class="wrapper fadeInDown">
+      <div id="formContent">
+         <h2 class="Main">Iniciar Sesión</h2>
+
+         <div class="FadeIn first">
+            <img src="{{ url_for('static', filename='logo.png') }}" id="icon"/>
+         </div>
+         
+         <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {{ form.nombre_usuario }}
+            {{ form.password }}
+            {{ form.submit }}
+         </form>
+         <div id="formFooter">
+         <a class="a2">Si no tienes cuenta.&#160</a><a class="UnderLineHover" href="{{ url_for('register') }}"> Registrate aqui</a>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
